@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anuja Photos — Photo Studio & 3D Portfolio • Latur, Maharashtra</title>
+  <link rel="stylesheet" href="/style.css?direct">
+  <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+
+  <!-- VIRTUAL SCROLL TRACK FOR NATIVE MOMENTUM SCROLLING -->
+  <div id="scroll-container"></div>
+
+  <!-- FIXED 3D VIEWPORT -->
+  <main id="viewport" aria-label="Anuja Photos 3D Exhibition">
+    <!-- Film grain & warm festive vignette overlays -->
+    <div class="film-grain"></div>
+    <div class="vignette-overlay"></div>
+
+    <!-- 3D CAMERA RIG -->
+    <div class="camera-rig" id="camera-rig">
+      <!-- Rotation Layer: yaw, pitch, roll + mouse reactive gaze -->
+      <div class="camera-rotation" id="camera-rot">
+        <!-- Position Layer: translation -x, -y, -z -->
+        <div class="camera-position" id="camera-pos">
+          <!-- 3D World Scene containing photos, grids, and typography -->
+          <div class="world" id="world">
+            
+            <!-- Ground & Horizon Spatial Grids -->
+            <div class="spatial-horizon-grid"></div>
+            <div class="spatial-ceiling-grid"></div>
+
+            <!-- INTRO / HERO 3D SECTION -->
+            <div class="hero-spatial-title">
+              <div class="hero-atmospheric-rule"></div>
+              <span class="hero-spatial-tag">LATUR STUDIO HUB • DESHPANDE COLONY • EST. 1998</span>
+              <h1 class="hero-spatial-h1">ANUJA PHOTOS</h1>
+              <div class="hero-spatial-marathi">अन्नुजा फोटो स्टुडिओ • लातूर</div>
+              <p class="hero-spatial-sub">
+                Preserving Sacred Traditions, Childhood Wonders & Family Legacies Across Latur & Maharashtra
+              </p>
+              <div class="hero-action-row">
+                <button class="hero-spatial-action" id="hero-dive-action" type="button">
+                  <span>Explore 3D Services</span>
+                  <span class="scroll-indicator-arrow">↓</span>
+                </button>
+                <a class="hero-spatial-wa" href="https://wa.me/919881224724?text=Hello%20Anuja%20Photos,%20I%20would%20like%20to%20inquire%20about%20your%20photography%20services%20in%20Latur." target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.76.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm0 10.375c-.886 0-1.688-.266-2.383-.75l-.171-.11-1.579.414.421-1.539-.115-.183c-.534-.849-.815-1.564-.815-2.441 0-2.54 2.067-4.606 4.608-4.606 2.54 0 4.606 2.066 4.606 4.606 0 2.541-2.066 4.609-4.608 4.609z"/>
+                  </svg>
+                  <span>WhatsApp Quote</span>
+                </a>
+              </div>
+              <div class="hero-atmospheric-anchor">
+                <span>FINE-ART DIGITAL CAPTURES • SACRED RITUALS • HEIRLOOMS</span>
+              </div>
+            </div>
+
+            <!-- 3D HERO DSLR CAMERA & OPTICAL APERTURE SHUTTER -->
+            <div class="hero-spatial-camera" id="hero-spatial-camera" aria-hidden="true">
+              <!-- Camera Magnesium Body -->
+              <div class="camera-body-shell">
+                <div class="camera-pentaprism">
+                  <span class="camera-brand-text">ANUJA</span>
+                  <div class="camera-hotshoe"></div>
+                </div>
+                <div class="camera-grip-texture"></div>
+                <div class="camera-accent-red"></div>
+                <div class="camera-dial-left"></div>
+                <div class="camera-dial-right"></div>
+                <div class="camera-shutter-release"></div>
+              </div>
+
+              <!-- Optical Lens Barrel & Aperture Mechanism -->
+              <div class="camera-lens-cylinder" id="camera-lens-cylinder">
+                <!-- Outer Barrel Markings & Focus Ring -->
+                <div class="lens-barrel-rim">
+                  <div class="lens-flange-ring"></div>
+                  <div class="lens-focus-ribs" id="lens-focus-ribs"></div>
+                  <div class="lens-engraved-text">FE 50mm F1.2 GM • LATUR STUDIO • EST. 1998</div>
+                </div>
+
+                <!-- 8-Blade Mechanical Aperture Iris (Rotates & Dilates on Scroll) -->
+                <div class="lens-aperture-stage">
+                  <svg class="aperture-iris-svg" id="aperture-iris-svg" viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="96" stroke="rgba(229, 185, 88, 0.45)" stroke-width="2.5" />
+                    <!-- Interlocking 8 Iris Blades -->
+                    <g class="aperture-blades-group" id="aperture-blades-group">
+                      <path d="M100 12 C138 24 168 54 180 92 L132 112 C122 84 104 68 84 62 Z" fill="url(#blade-dark-1)" stroke="rgba(229, 185, 88, 0.25)" stroke-width="0.8" />
+                      <path d="M188 100 C176 138 146 168 108 180 L88 132 C116 122 132 104 138 84 Z" fill="url(#blade-dark-2)" stroke="rgba(229, 185, 88, 0.25)" stroke-width="0.8" />
+                      <path d="M100 188 C62 176 32 146 20 108 L68 88 C78 116 96 132 116 138 Z" fill="url(#blade-dark-1)" stroke="rgba(229, 185, 88, 0.25)" stroke-width="0.8" />
+                      <path d="M12 100 C24 62 54 32 92 20 L112 68 C84 78 68 96 62 116 Z" fill="url(#blade-dark-2)" stroke="rgba(229, 185, 88, 0.25)" stroke-width="0.8" />
+                    </g>
+                    <!-- Center Aperture Bokeh Hole -->
+                    <circle class="aperture-iris-hole" id="aperture-iris-hole" cx="100" cy="100" r="16" fill="#040302" />
+                    <defs>
+                      <linearGradient id="blade-dark-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#342c24" />
+                        <stop offset="50%" stop-color="#201a14" />
+                        <stop offset="100%" stop-color="#120e0a" />
+                      </linearGradient>
+                      <linearGradient id="blade-dark-2" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#241e18" />
+                        <stop offset="50%" stop-color="#16120e" />
+                        <stop offset="100%" stop-color="#090705" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+
+                <!-- Multi-Coated Anti-Reflective Optical Glass -->
+                <div class="lens-glass-cover">
+                  <div class="glass-reflection-cyan"></div>
+                  <div class="glass-reflection-gold"></div>
+                  <div class="glass-center-highlight"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EPILOGUE 3D PANEL (At the end of the spatial track) -->
+            <div class="epilogue-3d-panel">
+              <div class="epilogue-header-tag">Studio Hub • Latur, Maharashtra</div>
+              <h2 class="epilogue-h2">Visit Anuja Photos Studio</h2>
+              <div class="epilogue-address-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+                <span>9HR6+M8F, Ausa Rd, Deshpande Colony, Latur, Maharashtra 413531</span>
+              </div>
+              <p class="epilogue-p">
+                Walk into our creative studio for album previews, maternity & toddler set consultations, or to book your wedding dates with our principal photography team.
+              </p>
+
+              <div class="epilogue-stats-row">
+                <div class="stat-item">
+                  <span class="stat-val">12+</span>
+                  <span class="stat-lbl">Years in Latur</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-val">1,200+</span>
+                  <span class="stat-lbl">Celebrations Captured</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-val">100%</span>
+                  <span class="stat-lbl">Family Smiles</span>
+                </div>
+              </div>
+
+              <div class="epilogue-action-group">
+                <a class="btn-whatsapp-primary" href="https://wa.me/919881224724?text=Hello%20Anuja%20Photos,%20I%20would%20like%20to%20visit%20your%20studio%20on%20Ausa%20Rd,%20Latur." target="_blank" rel="noopener">
+                  WhatsApp Consultation
+                </a>
+                <a class="btn-primary" href="tel:+919881224724">
+                  Call +91 9881224724
+                </a>
+                <a class="btn-secondary" href="https://maps.google.com/?q=9HR6%2BM8F,+Ausa+Rd,+Deshpande+Colony,+Latur,+Maharashtra+413531" target="_blank" rel="noopener">
+                  Google Maps
+                </a>
+              </div>
+            </div>
+
+          </div><!-- /#world -->
+        </div><!-- /#camera-pos -->
+      </div><!-- /#camera-rot -->
+    </div><!-- /#camera-rig -->
+  </main>
+
+  <!-- FREE ORBIT MODE FLOATING BANNER (Viewport Fixed) -->
+  <div class="orbit-mode-banner" id="orbit-banner">
+    ✦ 360° ORBIT ACTIVE — CLICK & DRAG ANYWHERE TO INSPECT THE STUDIO CHAMBER
+  </div>
+
+  <!-- HEADS-UP DISPLAY (HUD) LAYER -->
+  <header class="hud-layer" role="banner">
+    
+    <!-- TOP BAR -->
+    <div class="hud-top-bar hud-interactive">
+      <div class="brand-badge">
+        <div class="brand-mark">A</div>
+        <div>
+          <span class="brand-name">Anuja Photos</span>
+          <span class="brand-sub">Latur • MH</span>
+        </div>
+      </div>
+
+      <!-- Studio Address Pill with Maps Link -->
+      <a class="studio-address-pill" href="https://maps.google.com/?q=9HR6%2BM8F,+Ausa+Rd,+Deshpande+Colony,+Latur,+Maharashtra+413531" target="_blank" rel="noopener" title="Open studio address in Google Maps">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <span>Ausa Rd, Deshpande Colony, Latur</span>
+      </a>
+
+      <!-- Top Controls & Direct Contact Actions -->
+      <div class="top-action-group">
+        <a class="hud-contact-btn hud-phone-btn" href="tel:+919881224724" title="Call Anuja Photos studio directly">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span class="btn-label">Call 9881224724</span>
+        </a>
+
+        <a class="hud-contact-btn hud-wa-btn" id="top-wa-btn" href="https://wa.me/919881224724?text=Hello%20Anuja%20Photos,%20I%20would%20like%20to%20inquire%20about%20your%20photography%20packages%20in%20Latur." target="_blank" rel="noopener" title="Chat on WhatsApp">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.76.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm0 10.375c-.886 0-1.688-.266-2.383-.75l-.171-.11-1.579.414.421-1.539-.115-.183c-.534-.849-.815-1.564-.815-2.441 0-2.54 2.067-4.606 4.608-4.606 2.54 0 4.606 2.066 4.606 4.606 0 2.541-2.066 4.609-4.608 4.609z"/>
+          </svg>
+          <span class="btn-label">WhatsApp</span>
+        </a>
+
+        <button class="hud-btn hud-book-btn" id="btn-open-booking" type="button" title="Check date availability & package quote">
+          <span>Book Date</span>
+        </button>
+
+        <button class="hud-btn" id="btn-orbit-mode" type="button" title="Toggle free 360 drag rotation">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+            <path d="M21 3v5h-5"/>
+          </svg>
+          <span class="btn-label">360° Orbit</span>
+        </button>
+
+        <button class="hud-btn" id="btn-tour" type="button" title="Automatic showcase flythrough">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span class="btn-label">Tour</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT RAIL SCROLL PROGRESS -->
+    <aside class="hud-progress-rail" aria-hidden="true">
+      <div class="track-line">
+        <div class="track-fill" id="track-fill"></div>
+      </div>
+      <div class="progress-pct" id="progress-pct">01/05</div>
+    </aside>
+
+    <!-- 2D AMBIENT LUXURY PLACARD (STREAMLINED 3-ELEMENT HUD CONSOLE) -->
+    <section class="editorial-placard hud-interactive" id="editorial-placard" aria-label="Active Service Guide">
+      <!-- AMBIENT PILL (WHISPERS DURING SCROLL) -->
+      <div class="placard-inner" id="placard-toggle-area" role="button" tabindex="0" title="Click to view full service details & client reviews">
+        <!-- LEFT: CLEAN SERVICE IDENTIFIER -->
+        <div class="placard-info">
+          <span class="placard-chamber-tag" id="placard-badge">01 / 05</span>
+          <div class="placard-title-line">
+            <span class="placard-marathi" id="placard-marathi">अस्सल विवाहसोहळा</span>
+            <span class="placard-sep">•</span>
+            <h2 class="placard-title" id="placard-title">Weddings & Celebrations</h2>
+          </div>
+          <span class="placard-detail-cue">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span>Details</span>
+          </span>
+        </div>
+
+        <!-- RIGHT: STREAMLINED WHATSAPP ACTION -->
+        <div class="placard-actions">
+          <a class="placard-wa-btn" id="placard-wa-btn" href="https://wa.me/919881224724?text=Hello%20Anuja%20Photos,%20I%20would%20like%20to%20inquire%20about%20Wedding%20Photography%20packages%20in%20Latur." target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.76.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm0 10.375c-.886 0-1.688-.266-2.383-.75l-.171-.11-1.579.414.421-1.539-.115-.183c-.534-.849-.815-1.564-.815-2.441 0-2.54 2.067-4.606 4.608-4.606 2.54 0 4.606 2.066 4.606 4.606 0 2.541-2.066 4.609-4.608 4.609z"/>
+            </svg>
+            <span>WhatsApp Quote</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- EXPANDABLE SERVICE DETAIL DRAWER (OPENS SMOOTHLY UPWARD) -->
+      <div class="placard-detail-drawer" id="placard-detail-drawer" aria-hidden="true">
+        <div class="detail-drawer-header">
+          <span class="detail-drawer-badge" id="detail-badge">CHAMBER 01 / 05</span>
+          <button class="detail-drawer-close" id="detail-close-btn" type="button" aria-label="Close details">✕</button>
+        </div>
+        <div class="detail-drawer-body">
+          <div class="detail-drawer-marathi" id="detail-marathi">अस्सल विवाहसोहळा</div>
+          <h3 class="detail-drawer-title" id="detail-title">Weddings & Celebrations</h3>
+          <p class="detail-drawer-desc" id="detail-desc">Traditional rituals, candid vows, vibrant haldi & sangeet ceremonies across Latur & Marathwada.</p>
+          
+          <div class="detail-quote-box">
+            <p class="detail-quote-text" id="detail-quote">“Anuja Photos captured our Latur wedding with heart and soul. The raw emotions in every candid photo make us relive the day every time.”</p>
+            <span class="detail-client-name" id="detail-client">— Snehal & Rahul Shinde, Latur</span>
+          </div>
+
+          <div class="detail-deliverables-wrap" id="detail-deliverables">
+            <span class="detail-pill">Candid Stills</span>
+            <span class="detail-pill">4K Cinematic Film</span>
+            <span class="detail-pill">Canvera Luxe Album</span>
+            <span class="detail-pill">Drone Coverage</span>
+          </div>
+
+          <div class="detail-drawer-footer">
+            <a class="detail-wa-btn" id="detail-wa-btn" href="https://wa.me/919881224724?text=Hello%20Anuja%20Photos,%20I%20would%20like%20to%20inquire%20about%20Wedding%20Photography%20packages%20in%20Latur." target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.76.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm0 10.375c-.886 0-1.688-.266-2.383-.75l-.171-.11-1.579.414.421-1.539-.115-.183c-.534-.849-.815-1.564-.815-2.441 0-2.54 2.067-4.606 4.608-4.606 2.54 0 4.606 2.066 4.606 4.606 0 2.541-2.066 4.609-4.608 4.609z"/>
+              </svg>
+              <span>Instant WhatsApp Consultation</span>
+            </a>
+            <button class="detail-inspect-btn" id="detail-inspect-btn" type="button">
+              <span>Inspect 3D Photograph</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <polyline points="9 21 3 21 3 15"></polyline>
+                <line x1="21" y1="3" x2="14" y2="10"></line>
+                <line x1="3" y1="21" x2="10" y2="14"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden sink for legacy/optional bindings -->
+      <div style="display:none;" aria-hidden="true">
+        <span id="placard-series"></span>
+        <span id="placard-location"></span>
+        <p id="placard-desc"></p>
+        <span id="placard-quote"></span>
+        <span id="placard-client"></span>
+        <span id="placard-deliverables"></span>
+        <button id="placard-expand-btn"></button>
+      </div>
+    </section>
+
+    <!-- BOTTOM DOCK -->
+    <div class="hud-bottom-bar hud-interactive">
+      <div class="hud-hint-pill">
+        <span>Scroll to Tour • 1-5 Keys</span>
+      </div>
+
+      <!-- Center Waypoint Navigation Bar (5 Core Service Chambers) -->
+      <nav class="waypoint-navigator" aria-label="Studio Services">
+        <button class="waypoint-pill-btn" data-chapter="01 Weddings" data-target="0.18">
+          <span class="pill-dot"></span>01 Weddings
+        </button>
+        <button class="waypoint-pill-btn" data-chapter="02 Kids & Baby" data-target="0.36">
+          <span class="pill-dot"></span>02 Kids & Baby
+        </button>
+        <button class="waypoint-pill-btn" data-chapter="03 Pre-Wedding" data-target="0.54">
+          <span class="pill-dot"></span>03 Pre-Wedding
+        </button>
+        <button class="waypoint-pill-btn" data-chapter="04 Studio" data-target="0.72">
+          <span class="pill-dot"></span>04 Studio
+        </button>
+        <button class="waypoint-pill-btn" data-chapter="05 Product" data-target="0.90">
+          <span class="pill-dot"></span>05 Product
+        </button>
+      </nav>
+
+      <div class="hud-dummy-spacer" aria-hidden="true"></div>
+    </div>
+
+  </header>
+
+  <!-- DATE AVAILABILITY & PACKAGE INQUIRY MODAL -->
+  <section class="booking-modal" id="booking-modal" role="dialog" aria-modal="true" aria-label="Book Shoot">
+    <div class="modal-backdrop" id="booking-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close" aria-label="Close dialog">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-tag">Anuja Photos • Latur Studio Hub</span>
+        <h2 class="modal-title">Check Date & Get Package Quote</h2>
+        <p class="modal-sub">
+          Serving Latur, Ausa, Nilanga, Udgir & destination events across Maharashtra. Connect directly with our team.
+        </p>
+      </div>
+
+      <form class="booking-form" id="booking-form">
+        <div class="form-row">
+          <label class="form-label" for="shoot-service">Select Service</label>
+          <select class="form-select" id="shoot-service" required>
+            <option value="Wedding & Event Photography">Weddings & Sangeet (अस्सल विवाहसोहळा)</option>
+            <option value="Baby & Kids Photography">Kids & Baby Milestones (बालपण व गोड आठवणी)</option>
+            <option value="Outdoor Couple Shoot">Outdoor & Pre-Wedding (निसर्गरम्य प्री-वेडिंग)</option>
+            <option value="Indoor Studio Portrait">Indoor Studio Portraits (स्टुडिओ पोर्ट्रेट्स)</option>
+            <option value="Commercial & Product Shoot">Commercial & Product (व्यावसायिक व प्रॉडक्ट)</option>
+          </select>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label class="form-label" for="shoot-date">Preferred Date / Month</label>
+            <input class="form-input" id="shoot-date" type="date" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="shoot-venue">Location / Venue</label>
+            <input class="form-input" id="shoot-venue" type="text" placeholder="e.g. Latur City, Ausa Rd..." required />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label class="form-label" for="shoot-name">Your Name</label>
+            <input class="form-input" id="shoot-name" type="text" placeholder="Full Name" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="shoot-phone">WhatsApp Number</label>
+            <input class="form-input" id="shoot-phone" type="tel" placeholder="10-digit Mobile" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="form-label" for="shoot-notes">Shoot Requirements / Notes (Optional)</label>
+          <textarea class="form-textarea" id="shoot-notes" rows="2" placeholder="Tell us about the ceremonies, themes, or deliverables you need..."></textarea>
+        </div>
+
+        <button class="form-submit-wa" type="submit">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.972.531 1.76.819 2.796.819 3.18 0 5.767-2.587 5.767-5.766.001-3.181-2.586-5.766-5.767-5.766zm0 10.375c-.886 0-1.688-.266-2.383-.75l-.171-.11-1.579.414.421-1.539-.115-.183c-.534-.849-.815-1.564-.815-2.441 0-2.54 2.067-4.606 4.608-4.606 2.54 0 4.606 2.066 4.606 4.606 0 2.541-2.066 4.609-4.608 4.609z"/>
+          </svg>
+          <span>Send Inquiry via WhatsApp (+91 9881224724)</span>
+        </button>
+      </form>
+
+      <div class="modal-footer-contact">
+        <span>Direct Call: <a href="tel:+919881224724">+91 9881224724</a></span>
+        <span>•</span>
+        <a href="https://maps.google.com/?q=9HR6%2BM8F,+Ausa+Rd,+Deshpande+Colony,+Latur,+Maharashtra+413531" target="_blank" rel="noopener">
+          Studio: Deshpande Colony, Latur (Maps ↗)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLUID LIGHTBOX / PHOTO INSPECTION SHEET -->
+  <section class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Photo Details">
+    <div class="lightbox-backdrop"></div>
+    
+    <div class="lightbox-dialog">
+      <button class="lightbox-close-btn" id="lb-close" aria-label="Close dialog">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="lightbox-image-stage" id="lb-stage">
+        <img class="lightbox-img" id="lb-img" src="" alt="Exhibition Photo">
+        <div class="lightbox-loupe" id="lb-loupe">
+          <div class="loupe-crosshair"></div>
+        </div>
+      </div>
+
+      <div class="lightbox-details-panel">
+        <div>
+          <div class="lb-series-badge" id="lb-series">Series Title</div>
+          <h2 class="lb-title" id="lb-title">Artwork Title</h2>
+          <p class="lb-desc" id="lb-desc">Artwork curatorial description goes here.</p>
+
+          <!-- Curated Color Palette -->
+          <div class="lb-palette-row">
+            <span class="palette-label">Tonal Palette</span>
+            <div class="palette-swatches" id="lb-palette">
+              <span class="palette-swatch" style="background: #15161c;"></span>
+              <span class="palette-swatch" style="background: #3a3c48;"></span>
+              <span class="palette-swatch" style="background: #80818d;"></span>
+              <span class="palette-swatch" style="background: #d8b878;"></span>
+              <span class="palette-swatch" style="background: #f4efe2;"></span>
+            </div>
+          </div>
+
+          <div class="lb-exif-grid">
+            <div class="exif-cell">
+              <span class="exif-label">Camera</span>
+              <span class="exif-value" id="lb-camera">—</span>
+            </div>
+            <div class="exif-cell">
+              <span class="exif-label">Optics</span>
+              <span class="exif-value" id="lb-lens">—</span>
+            </div>
+            <div class="exif-cell" style="grid-column: span 2;">
+              <span class="exif-label">Deliverables</span>
+              <span class="exif-value" id="lb-deliverables">—</span>
+            </div>
+            <div class="exif-cell" style="grid-column: span 2;">
+              <span class="exif-label">Location & Studio</span>
+              <span class="exif-value" id="lb-location">Latur, Maharashtra</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lb-nav-row">
+          <button class="lb-nav-btn" id="lb-prev" type="button">← Previous</button>
+          <a class="lb-wa-action" id="lb-wa-btn" href="https://wa.me/919881224724" target="_blank" rel="noopener">Inquire This Service</a>
+          <button class="lb-nav-btn" id="lb-next" type="button">Next →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="photos-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "anuja-photos-3d-camera-rotate",
+  "version": "1.0.0",
+  "description": "3D Spatial Camera Rotate & Scroll Photography Exhibition Website",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "keywords": [
+    "css3d",
+    "camera-rotate",
+    "scroll-animation",
+    "portfolio",
+    "photography"
+  ],
+  "author": "Anuja",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
