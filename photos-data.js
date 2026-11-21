@@ -4,8 +4,7 @@
  * Studio Address: 9HR6+M8F, Ausa Rd, Deshpande Colony, Latur, Maharashtra 413531
  */
 
-(function () {
-  const STUDIO_INFO = {
+export const STUDIO_INFO = {
     name: 'Anuja Photos',
     marathiName: 'अन्नुजा फोटो स्टुडिओ',
     tagline: 'Preserving Sacred Traditions, Childhood Wonders & Family Legacies',
@@ -17,7 +16,7 @@
     mapsUrl: 'https://maps.google.com/?q=9HR6%2BM8F,+Ausa+Rd,+Deshpande+Colony,+Latur,+Maharashtra+413531'
   };
 
-  const GALLERY_DATA = [
+export const GALLERY_DATA = [
     {
       id: 'service-1',
       title: 'Weddings & Celebrations',
@@ -115,7 +114,7 @@
     }
   ];
 
-  const CAMERA_WAYPOINTS = [
+export const CAMERA_WAYPOINTS = [
     {
       t: 0.0,
       name: 'Studio Arrival',
@@ -174,13 +173,9 @@
     }
   ];
 
-  // Universal Environment Export
-  if (typeof window !== 'undefined') {
-    window.STUDIO_INFO = STUDIO_INFO;
-    window.GALLERY_DATA = GALLERY_DATA;
-    window.CAMERA_WAYPOINTS = CAMERA_WAYPOINTS;
-  }
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { STUDIO_INFO, GALLERY_DATA, CAMERA_WAYPOINTS };
-  }
-})();
+// Universal Window Attachment
+if (typeof window !== 'undefined') {
+  window.STUDIO_INFO = STUDIO_INFO;
+  window.GALLERY_DATA = GALLERY_DATA;
+  window.CAMERA_WAYPOINTS = CAMERA_WAYPOINTS;
+}

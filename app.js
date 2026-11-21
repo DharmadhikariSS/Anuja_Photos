@@ -3,9 +3,7 @@
  * Pure CSS 3D Transforms driven by GPU hardware acceleration & spring physics.
  */
 
-(function () {
-  const GALLERY_DATA = (typeof window !== 'undefined' && window.GALLERY_DATA) ? window.GALLERY_DATA : [];
-  const CAMERA_WAYPOINTS = (typeof window !== 'undefined' && window.CAMERA_WAYPOINTS) ? window.CAMERA_WAYPOINTS : [];
+import { STUDIO_INFO, GALLERY_DATA, CAMERA_WAYPOINTS } from './photos-data.js';
 
 class SpatialCameraApp {
   constructor() {
@@ -1418,4 +1416,3 @@ class SpatialCameraApp {
   } else {
     new SpatialCameraApp();
   }
-})();
